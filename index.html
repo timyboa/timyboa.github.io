@@ -9,6 +9,7 @@
   <meta name="author" content="Timothée Barattin">
   <title>Timothée Barattin's Portfolio</title>
 
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap"
@@ -31,19 +32,23 @@
     <picture class="header__picture">
       <source media="(min-width: 650px)"
         srcset="assets/images/Tim@SSD_150.webp 1x, assets/images/Tim@SSD_300.webp 2x, assets/images/Tim@SSD_450.webp 3x">
-      <img class="picture__image" src="assets/images/Tim@SSD_450.webp">
+      <img class="picture__image" src="assets/images/Tim@SSD_450.webp"
+        alt="Picture of Timothée Barattin">
     </picture>
     <div class="header__caption">
       <h1 class="caption__title">Timothée Barattin</h1>
       <div>
         <h2 class="caption__subtitle">
           Software Engineer
+          <span class="subtitle__note">
+            w/
+          </span>
           <span class="subtitle__note" id="subtitle__experience">
-             years of experience
+            years of experience
           </span>
           <script>
             const experience = getYearsToDate(new Date(2018, 1, 1));
-            var experienceParagraph = document.getElementById('subtitle__experience');
+            const experienceParagraph = document.getElementById('subtitle__experience');
             experienceParagraph.innerHTML = experience + experienceParagraph.innerHTML;
           </script>
         </h2>
@@ -53,8 +58,8 @@
           y/o
         </div>
         <script>
-            const age = getYearsToDate(new Date(1992, 5, 26));
-            var ageParagraph = document.getElementById('caption__age');
+          const age = getYearsToDate(new Date(1992, 5, 26));
+          const ageParagraph = document.getElementById('caption__age');
           ageParagraph.innerHTML = age + ageParagraph.innerHTML;
         </script>
         <div class="flex-item">
@@ -80,10 +85,10 @@
 
   <main class="main">
     <aside class="main__aside">
-      <section class="main__section introduction">
+      <section class="main__section summary no-print">
         <details class="section__details">
           <summary class="details__summary">
-            <h2 class="details__title">Introduction</h2>
+            <h2 class="details__title">Summary</h2>
           </summary>
           <article class="details__article">
             <p class="article__description">
@@ -100,6 +105,45 @@
           </article>
         </details>
       </section>
+      <section class="main__section certifications">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title">Certifications</h2>
+          </summary>
+          <article class="details__article">
+            <p class="article__description">
+              <strong class="description__subtitle">
+                PSPO1
+              </strong>
+              Professional Scrum Product Owner 1 (2025)
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">
+                AWS Certified Cloud Practitioner
+              </strong>
+              (2024)
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">
+                PSM1
+              </strong>
+              Professional Scrum Master 1 (2022)
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">
+                OCP
+              </strong>
+              Oracle Certified Professional Java SE 11 (2022)
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">
+                OCA
+              </strong>
+              Oracle Certified Associate Java SE 8 (2022)
+            </p>
+          </article>
+        </details>
+      </section>
 
       <section class="main__section skills">
         <details class="section__details">
@@ -108,25 +152,38 @@
           </summary>
           <article class="details__article">
             <p class="article__description">
-              <mark class="description__subtitle">Frontend</mark>
+              <strong class="description__subtitle">Frontend</strong>
               HTML, CSS, JavaScript, TypeScript, Angular, Ionic, React,
-              Bootstrap
+              Bootstrap, Material Design
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Backend</mark>
-              Java, Spring Boot, NodeJS (NestJS), Firebase (GCP), AWS Lambda
+              <strong class="description__subtitle">Backend</strong>
+              Java, Spring Boot, NodeJS (NestJS), nginx
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Database</mark>
-              MySQL, PostgreSQL, Oracle, Firestore (NoSQL), Redis, JPA, Hibernate, Querydsl, jOOQ, TypeORM, Sequelize
+              <strong class="description__subtitle">Database</strong>
+              MySQL, PostgreSQL, Oracle, Firestore (NoSQL), Redis, Flyway,
+              JPA, Hibernate, Querydsl, jOOQ, TypeORM, Sequelize
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Testing</mark>
+              <strong class="description__subtitle">Testing</strong>
               JUnit, Mockito, Wiremock, Jest, Cypress, Selenium
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Other</mark>
-              Jenkins, GitLab CI, Bitbucket CI, Docker, Kubernetes, AWS
+              <strong class="description__subtitle">CI/CD</strong>
+              Jenkins, GitLab CI, Bitbucket CI, Docker, Kubernetes
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">Monitoring</strong>
+              Splunk, Grafana, Prometheus
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">Cloud</strong>
+              Firebase (GCP), AWS (Lambda, S3, EC2, ECS, EKS)
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">AI Tools</strong>
+              Claude Code
             </p>
           </article>
         </details>
@@ -139,25 +196,26 @@
           </summary>
           <article class="details__article">
             <p class="article__description">
-              <mark class="description__subtitle">French</mark>
+              <strong class="description__subtitle">French</strong>
               Mother tongue
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">English</mark>
+              <strong class="description__subtitle">English</strong>
               Full professional proficiency
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">German</mark>
+              <strong class="description__subtitle">German</strong>
               Professional working proficiency
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Italian</mark>
+              <strong class="description__subtitle">Italian</strong>
               Professional working proficiency
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Spanish</mark>
+              <strong class="description__subtitle">Spanish</strong>
               Professional working proficiency
             </p>
+          </article>
         </details>
       </section>
 
@@ -168,12 +226,16 @@
           </summary>
           <article class="details__article">
             <p class="article__description">
-              <mark class="description__subtitle">Sport</mark>
-              Resistance Training, Basketball, Snowboard, Golf
+              <strong class="description__subtitle">Sport</strong>
+              Resistance training, Basketball, Snowboarding, Skateboarding
             </p>
             <p class="article__description">
-              <mark class="description__subtitle">Music</mark>
+              <strong class="description__subtitle">Music</strong>
               Guitar, Salsa Dancing
+            </p>
+            <p class="article__description">
+              <strong class="description__subtitle">Other</strong>
+              Warhammer 40k Lore
             </p>
           </article>
         </details>
@@ -188,84 +250,134 @@
           </summary>
 
           <article class="details__article">
-            <time class="article__time">
-              January 2022 - Today
-              <span class="time__duration" id="adesso"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Dev/Ops Engineer</mark>
-              @ adesso Suisse SA
-            </p>
-            <ul class="article__description">
-              <li>Build and maintain customer-facing applications for billing and self-service in
-                the telecom industry.</li>
-              <li>Work in coordination with multiple teams responsible for
-                inter-dependent products.</li>
-              <li>Monitor day-to-day operations and perform on-call duties.</li>
-              <li><mark class="description__subtitle">Technologies</mark> Spring
-                Boot, Angular 12+, React, JPA, Hibernate, jOOQ, PostgreSQL, Jenkins,
-                GitLab CI, Docker</li>
-            </ul>
-          </article>
+            <header>
+              <time class="article__time" datetime="2022-01">
+                January 2022 - Today
+                <span class="time__duration" id="adesso"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  DevOps Engineer
+                </strong>
+                @ adesso Suisse SA
+              </h3>
+            </header>
+            <section class="article__project article__project--red">
+              <time class="project__time" datetime="2023-07/2025-12">
+                July 2023 - December 2025
+                <span class="time__duration" id="ba2"></span>
+              </time>
+              <h4 class="project__name">
+                <strong class="project__title">
+                  Billing & Analytics 2.0
+                </strong>
+              </h4>
+              <p>Billing & Analytics is an e-service that enables B2B customers
+                to efficiently control and analyze their billing and usage data.
+              </p>
+              <p>As a full-stack Developer and Product Owner proxy on the Scrum
+                Team I have contributed to the development of our backend and
+                frontend applications by:</p>
+              <ul class="project__description">
+                <li>Migrating and refactoring features from the deprecated
+                  application to the new version of the application.</li>
+                <li>Refining new features with Requirements Engineers and
+                  stakeholders.</li>
+                <li>Implementing features together with unit and integration
+                  tests.</li>
+                <li>Setting up CI & CD pipelines on GitLab CI.</li>
+                <li>Performing on-call duty to monitor the operation of the
+                  application.</li>
+                <li>Taking over Product Owner duties in my deputy role.</li>
+              </ul>
+              <p>
+                <strong class="description__technologies">Technologies:</strong>
+                Spring Boot, React, PostgreSQL, Flyway, jOOQ, Redis, Docker,
+                GitLab CI
+              </p>
+            </section>
 
-          <article class="details__article">
-            <time class="article__time">
-              July 2019 - December 2021
-              <span class="time__duration" id="hiberus"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Full-Stack JavaScript
-                Developer</mark>
-              @ Hiberus Tecnología
-            </p>
-            <ul class="article__description">
-              <li>Develop full-stack applications for customers in the industry.
-              </li>
-              <li>Work inside multiple teams on different projects at once.</li>
-              <li>Present new developments to clients and gather feedback.</li>
-              <li><mark class="description__subtitle">Technologies</mark>
-                Angular 12, Ionic, NestJS, TypeORM, Sequelize, MySQL, Oracle</li>
-            </ul>
+            <section class="article__project article__project--red">
+              <time class="project__time" datetime="2022-09/2023-06">
+                September 2022 - June 2023
+                <span class="time__duration" id="biqb2b"></span>
+              </time>
+              <h4 class="project__name">
+                <strong class="project__title">
+                  BillManager
+                </strong>
+              </h4>
+              <p>BillManager is a web and mobile application for shop
+                employees to manage customer contracts, subscriptions and costs
+                efficiently.
+              </p>
+              <p>As a full-stack Developer on the Scrum Team I have contributed
+                to the development of our backend and frontend applications by:
+              </p>
+              <ul class="project__description">
+                <li>Defining the application's data model in accordance with
+                  consumed Kafka Topics and domain model.</li>
+                <li>Setting up database triggers to handle data coming into our
+                  database asynchronously from Kafka.</li>
+                <li>Creating friendly user interfaces according to Figma
+                  designs.</li>
+                <li>Building complex dynamic forms with Angular and Formly.</li>
+                <li>Making authenticated calls using M2M tokens to other
+                  services inside of the company's network.</li>
+              </ul>
+              <p>
+                <strong class="description__technologies">Technologies:</strong>
+                Spring Boot, Angular, PostgreSQL, Flyway, Querydsl, Docker,
+                Jenkins
+              </p>
+            </section>
           </article>
 
           <div class="details__more experience" style="display: none;">
             <article class="details__article">
-              <time class="article__time">
-                September 2016 - September 2018
-                <span class="time__duration" id="entrepreneur-club"></span>
-              </time>
-              <p class="article__role">
-                <mark class="article__title">Marketing</mark>
-                @ ETH Entrepreneur Club
-              </p>
-              <ul class="article__description">
-                <li>Lead the marketing team (6 people) and coordinate our
-                  marketing effort across digital and physical channels.</li>
-                <li>Build the club's brand by raising awareness and fostering
-                  interactions online and offline.</li>
-                <li>Generate applications for our events (>1000 applications
-                  semester) and work closely with the events and operations
-                  teams.</li>
-              </ul>
-            </article>
-
-            <article class="details__article">
-              <time class="article__time">
-                March 2017 - August 2017
-                <span class="time__duration" id="ruag"></span>
-              </time>
-              <p class="article__role">
-                <mark class="article__title">Engineering Intern</mark>
-                @ RUAG Space
-              </p>
-              <ul class="article__description">
-                <li>Support the Mechanism Product Unit engineers on multiple
-                  projects.</li>
-                <li>Build models using software tools to simulate and assess
-                  mechanisms' testing procedures.</li>
-                <li>Post-process, analyze and visualize data for making reports,
-                  client presentations and articles.</li>
-              </ul>
+              <header>
+                <time class="article__time" datetime="2019-07/2021-12">
+                  July 2019 - December 2021
+                  <span class="time__duration" id="hiberus"></span>
+                </time>
+                <h3 class="article__role">
+                  <strong class="article__title article__title--red">
+                    Full-Stack JavaScript Developer
+                  </strong>
+                  @ Hiberus Tecnología
+                </h3>
+              </header>
+              <section>
+                <p>As a full-stack developer I worked on various mobile and web
+                  applications, sometimes alone, often in a team, for multiple
+                  clients
+                  across industries.
+                </p>
+                <ul class="project__description">
+                  <li>Create a library of frontend web components for internal
+                    use
+                    across corporate applications.</li>
+                  <li>Build and maintain a REST API for the planning of product
+                    promotions and automatic generation of posters and labels
+                    for
+                    retail supermarkets.</li>
+                  <li>Maintain a complete solution for customer loyalty
+                    including
+                    a native mobile application, a hybrid mobile application, a
+                    web dashboard, a REST API, and a database for a large
+                    shopping
+                    mall.</li>
+                  <li>Digitalization of production planning and manufacturing
+                    processes for a polymer casting plant producing parts for
+                    the
+                    automotive industry.</li>
+                </ul>
+                <p>
+                  <strong
+                    class="description__technologies">Technologies:</strong>
+                  Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL, Oracle
+                </p>
+              </section>
             </article>
           </div>
 
@@ -276,69 +388,92 @@
         </details>
       </section>
 
-      <section class="main__section projects">
+      <section class="main__section freelance">
         <details class="section__details">
           <summary class="details__summary">
-            <h2 class="details__title">Projects</h2>
+            <h2 class="details__title">Freelance Projects</h2>
           </summary>
 
           <article class="details__article">
-            <time class="article__time">
-              April 2021 - November 2021
-              <span class="time__duration" id="brainfood-2"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Brainfood2</mark>
-              w/ Auto-ID Labs & Inselspital Bern
-            </p>
-            <p class="article__description">
-              Develop a web app to track patients’ post-surgery diet, featuring
-              automatic emailing, progress tracking, 3rd party services
-              intergration, and admin panel.
-              <br>
-              <mark class="description__subtitle">Technologies</mark>
-              Angular 10, Firebase (Authentication, Firestore, Cloud Functions,
-              Hosting)
-            </p>
+            <header>
+              <time class="article__time" datetime="2021-04/2021-11">
+                April 2021 - November 2021
+                <span class="time__duration" id="brainfood-2"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  Brainfood2
+                </strong>
+                w/ Auto-ID Labs & Inselspital Bern
+              </h3>
+            </header>
+            <section>
+              <p class="article__description">
+                Develop a web app to track patients’ post-surgery diet,
+                featuring
+                automatic emailing, progress tracking, 3rd party services
+                integration, and admin panel.
+              </p>
+              <p>
+                <strong class="description__technologies">Technologies:</strong>
+                Angular 10, Firebase (Authentication, Firestore, Cloud,
+                Functions, Hosting)
+              </p>
+            </section>
           </article>
 
           <article class="details__article">
-            <time class="article__time">
-              July 2020 - September 2020
-              <span class="time__duration" id="food-literacy-survey"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Food Literacy Survey</mark>
-              w/ Auto-ID Labs & Diabetes Center Berne
-            </p>
-            <p class="article__description">
-              Develop a web app to survey diabetes patients, featuring
-              randomized questions, automatic emailing, and admin panel.
-              <br>
-              <mark class="description__subtitle">Technologies</mark>
-              Angular 10, Firebase (Authentication, Firestore, Cloud Functions,
-              Hosting)
-            </p>
+            <header>
+              <time class="article__time" datetime="2020-07/2020-09">
+                July 2020 - September 2020
+                <span class="time__duration" id="food-literacy-survey"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  Food Literacy Survey
+                </strong>
+                w/ Auto-ID Labs & Diabetes Center Berne
+              </h3>
+            </header>
+            <section>
+              <p class="article__description">
+                Develop a web app to survey diabetes patients, featuring
+                randomized questions, automatic emailing, and admin panel.
+              </p>
+              <p>
+                <strong class="description__technologies">Technologies:</strong>
+                Angular 10, Firebase (Authentication, Firestore, Cloud
+                Functions, Hosting)
+              </p>
+            </section>
           </article>
 
           <div class="details__more projects" style="display: none;">
             <article class="details__article">
-              <time class="article__time">
-                February 2018 - December 2019
-                <span class="time__duration" id="betterchoice"></span>
-              </time>
-              <p class="article__role">
-                <mark class="article__title">BetterChoice</mark>
-                w/ Auto-ID Labs & Swiss Society for Nutrition
-              </p>
-              <p class="article__description">
-                Develop BetterChoice, a mobile health application providing
-                tailored and customizable feedback on grocery shopping to
-                consumers.
-                <br>
-                <mark class="description__subtitle">Technologies</mark>
-                Ionic 4, Angular 7, Firebase (Authentication, Firestore)
-              </p>
+              <header>
+                <time class="article__time" datetime="2018-02/2019-12">
+                  February 2018 - December 2019
+                  <span class="time__duration" id="betterchoice"></span>
+                </time>
+                <h3 class="article__role">
+                  <strong class="article__title article__title--red">
+                    BetterChoice
+                  </strong>
+                  w/ Auto-ID Labs & Swiss Society for Nutrition
+                </h3>
+              </header>
+              <section>
+                <p class="article__description">
+                  Develop BetterChoice, a mobile health application providing
+                  tailored and customizable feedback on grocery shopping to
+                  consumers.
+                </p>
+                <p>
+                  <strong
+                    class="description__technologies">Technologies:</strong>
+                  Ionic 4, Angular 7, Firebase (Authentication, Firestore)
+                </p>
+              </section>
             </article>
           </div>
 
@@ -356,53 +491,72 @@
           </summary>
 
           <article class="details__article">
-            <time class="article__time">
-              September 2015 - September 2019
-              <span class="time__duration" id="eth"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Management, Technology and
-                Economics</mark>
-              @ ETH Zurich
-            </p>
-            <p class="article__description">
-              Interdisciplinary Master program for engineers and scientists at
-              the Swiss Federal Institute of Technology in Zurich, graduated
-              September 2019.
-            </p>
+            <header>
+              <time class="article__time" datetime="2015-09/2019-09">
+                September 2015 - September 2019
+                <span class="time__duration" id="eth"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  Management, Technology and Economics
+                </strong>
+                @ ETH Zurich
+              </h3>
+            </header>
+            <section>
+              <p class="article__description">
+                Interdisciplinary Master program for engineers and scientists at
+                the Swiss Federal Institute of Technology in Zurich, graduated
+                September 2019.
+              </p>
+            </section>
           </article>
 
           <article class="details__article">
-            <time class="article__time">
-              September 2016 - December 2019
-              <span class="time__duration" id="climate-kic"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Climate-KIC Master Programme</mark>
-              @ ETH Zurich
-            </p>
-            <p class="article__description">
-              European Master program to forge the next generation of cleantech
-              entrepreneurs and climate innovators.
-            </p>
+            <header>
+              <time class="article__time" datetime="2016-09/2019-12">
+                September 2016 - December 2019
+                <span class="time__duration" id="climate-kic"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  Climate-KIC Master Programme
+                </strong>
+                @ ETH Zurich
+              </h3>
+            </header>
+            <section>
+              <p class="article__description">
+                European Master program to forge the next generation of
+                cleantech
+                entrepreneurs and climate innovators.
+              </p>
+            </section>
           </article>
 
           <article class="details__article">
-            <time class="article__time">
-              September 2012 - July 2015
-              <span class="time__duration" id="epfl"></span>
-            </time>
-            <p class="article__role">
-              <mark class="article__title">Mechanical Engineering</mark>
-              @ EPFL
-            </p>
-            <p class="article__description">
-              Bachelor degree in Mechanical Engineering from the Swiss Federal
-              Institute of Technology in Lausanne, graduated August 2015.
-              <br>
-              <mark class="description__subtitle">Exchange year</mark>
-              @ Politecnico di Torino in Italy (2014 - 2015).
-            </p>
+            <header>
+              <time class="article__time" datetime="2012-09/2015-07">
+                September 2012 - July 2015
+                <span class="time__duration" id="epfl"></span>
+              </time>
+              <h3 class="article__role">
+                <strong class="article__title article__title--red">
+                  Mechanical Engineering
+                </strong>
+                @ EPFL
+              </h3>
+            </header>
+            <section>
+              <p class="article__description">
+                Bachelor degree in Mechanical Engineering from the Swiss Federal
+                Institute of Technology in Lausanne, graduated August 2015.
+              </p>
+              <p>
+                <strong class="description__subtitle">Exchange year</strong>
+                @ Politecnico di Torino in Italy (2014 - 2015)
+              </p>
+            </section>
           </article>
         </details>
       </section>
@@ -411,7 +565,7 @@
 
   <footer class="footer">
     <div class="footer__copyrights">
-      © Timothée Barattin 2025
+      © Timothée Barattin 2026
     </div>
   </footer>
 
@@ -420,7 +574,7 @@
     const summaryEl = document.getElementsByClassName('details__summary');
     let windowWidthMediaQuery = window.matchMedia('(min-width: 650px)');
     function toggleDetailsElements(elements, open) {
-      for (var i = 0; i < elements.length; i++) {
+      for (let i = 0; i < elements.length; i++) {
         elements.item(i).open = open;
       };
     };
@@ -429,7 +583,7 @@
       toggleDetailsElements(detailsEl, true);
     }
 
-    for (var i = 0; i < summaryEl.length; i++) {
+    for (let i = 0; i < summaryEl.length; i++) {
       summaryEl.item(i).addEventListener('click', function (e) {
         if (windowWidthMediaQuery.matches) {
           e.preventDefault();
@@ -462,27 +616,27 @@
     }
 
     // experiences
-    var adessoEl = document.getElementById('adesso');
+    const adessoEl = document.getElementById('adesso');
     adessoEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2022, 0, 1), new Date())})`;
-    var hiberusEl = document.getElementById('hiberus');
+    const ba2El = document.getElementById('ba2');
+    ba2El.innerHTML = `(${getYearsAndMonthsDuration(new Date(2023, 6, 1), new Date(2026, 0, 1))})`;
+    const biqb2bEl = document.getElementById('biqb2b');
+    biqb2bEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2022, 8, 1), new Date(2023, 6, 1))})`;
+    const hiberusEl = document.getElementById('hiberus');
     hiberusEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2019, 6, 1), new Date(2022, 0, 1))})`;
-    var entrpreneurClubEl = document.getElementById('entrepreneur-club');
-    entrpreneurClubEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2016, 8, 1), new Date(2018, 8, 1))})`;
-    var ruagEl = document.getElementById('ruag');
-    ruagEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2017, 2, 1), new Date(2017, 8, 1))})`;
     // projects
-    var brainfood2El = document.getElementById('brainfood-2');
+    const brainfood2El = document.getElementById('brainfood-2');
     brainfood2El.innerHTML = `(${getYearsAndMonthsDuration(new Date(2021, 3, 1), new Date(2021, 11, 1))})`;
-    var foodLiteracySurveyEl = document.getElementById('food-literacy-survey');
+    const foodLiteracySurveyEl = document.getElementById('food-literacy-survey');
     foodLiteracySurveyEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2020, 6, 1), new Date(2020, 9, 1))})`;
-    var betterChoiceEl = document.getElementById('betterchoice');
+    const betterChoiceEl = document.getElementById('betterchoice');
     betterChoiceEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2018, 1, 1), new Date(2020, 0, 1))})`;
     // studies
-    var ethEl = document.getElementById('eth');
+    const ethEl = document.getElementById('eth');
     ethEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2015, 8, 1), new Date(2019, 8, 1))})`;
-    var climateKicEl = document.getElementById('climate-kic');
+    const climateKicEl = document.getElementById('climate-kic');
     climateKicEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2016, 8, 1), new Date(2019, 11, 1))})`;
-    var epflEl = document.getElementById('epfl');
+    const epflEl = document.getElementById('epfl');
     epflEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2012, 8, 1), new Date(2015, 6, 1))})`;
   </script>
   <script async src="portfolio.js"></script>
