@@ -121,9 +121,6 @@ summary::-webkit-details-marker {
 
 .details__summary::-webkit-details-marker {
   list-style: none;
-}
-
-.details__summary::-webkit-details-marker {
   display: none;
 }
 
@@ -144,10 +141,6 @@ summary::-webkit-details-marker {
   .time__duration {
     font-size: 0.8rem;
   }
-}
-
-.article__time--red {
-  color: red;
 }
 
 h3.article__role {
@@ -303,12 +296,51 @@ ul.project__description {
 
 @media print {
 
-  .no-print,
+  body {
+    font-size: 12px;
+  }
+
   .no-print {
     display: none;
   }
 
   .print {
     display: block;
+  }
+
+  /* Override inline style="display: none;" set by JS toggle */
+  .details__more {
+    display: block !important;
+    animation: none !important;
+  }
+
+  .button-more {
+    display: none;
+  }
+
+  /* Prevent sections from splitting across pages */
+  .details__article,
+  .article__project {
+    break-inside: avoid;
+  }
+
+  /* Keep section headers with their content */
+  /* Keep article headers with their body */
+  .details__summary,
+  .details__article>header {
+    break-after: avoid;
+  }
+
+  /* Avoid widows/orphans in text */
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Page 2: force sidebar and main content to start on new page */
+  .main__section.languages,
+  .main__section.freelance {
+    break-before: page;
   }
 }
