@@ -55,13 +55,13 @@ summary::-webkit-details-marker {
 }
 
 .main__section {
-  border-top: dotted red;
+  border-top: dotted #0d47a1;
   margin-top: 0.33em;
 }
 
 .main__section:last-child:not(.summary) {
   padding-bottom: 0.66em;
-  border-bottom: dotted red;
+  border-bottom: dotted #0d47a1;
 }
 
 .header__picture {
@@ -104,7 +104,7 @@ summary::-webkit-details-marker {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: 500;
-  color: red;
+  color: #0d47a1;
   margin-block-start: 0;
   margin-block-end: 0;
 
@@ -153,8 +153,8 @@ h3.article__role {
   font-weight: 500;
 }
 
-.article__title--red {
-  color: red;
+.article__title--#0d47a1 {
+  color: #0d47a1;
 }
 
 .article__description {
@@ -162,7 +162,7 @@ h3.article__role {
 }
 
 .description__subtitle {
-  color: red;
+  color: #0d47a1;
 }
 
 h4.project__name {
@@ -281,7 +281,7 @@ ul.project__description {
 }
 
 .social-link:hover {
-  color: red;
+  color: #0d47a1;
 }
 
 .social-icon {
