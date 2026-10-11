@@ -263,16 +263,12 @@
           </summary>
           <article class="details__article">
             <p class="article__description">
-              <strong class="description__subtitle">Sport</strong>
+              <strong class="description__subtitle">Sports</strong>
               Resistance training, Basketball, Snowboarding, Skateboarding
             </p>
             <p class="article__description">
-              <strong class="description__subtitle">Music</strong>
-              Guitar, Salsa Dancing
-            </p>
-            <p class="article__description">
               <strong class="description__subtitle">Other</strong>
-              Warhammer 40k Lore
+              Warhammer 40k Lore, Magic the Gathering
             </p>
           </article>
         </details>
@@ -300,6 +296,44 @@
               </h3>
             </header>
             <section class="article__project article__project--red">
+              <time class="project__time" datetime="2026-01">
+                January 2026 - Present
+                <span class="time__duration" id="egov"></span>
+              </time>
+              <h4 class="project__name">
+                <strong class="project__title">
+                  eGov Dossier
+                </strong>
+              </h4>
+              <p>eGov Dossier is a document management system (DMS) for storing
+                and managing documents centrally. It comes to replace an
+                outdated legacy system. This requires migrating millions of
+                documents and their metadata, ensuring backwards-compatibility
+                by keeping all existing functionalities intact, extending
+                functionality, as well as improving overall system performance.
+              </p>
+              <p>As a full-stack Developer on the Scrum Team I have contributed
+                to the development of the new system by:
+              </p>
+              <ul class="project__description">
+                <li>Conducting in-depth analysis of the legacy system's code and
+                  discussing findings with the rest of the team.</li>
+                <li>Documenting the legacy system's full functionality for
+                  technical and non-technical profiles to understand.</li>
+                <li>Studying the legacy datamodel and planning the data
+                  migration.</li>
+                <li>Breaking features into Stories together with Business
+                  Analysts so that Stories can be estimated, planned, and
+                  implemented by the team.</li>
+              </ul>
+              <p>
+                <strong class="description__technologies">Technologies:</strong>
+                Spring Boot 3, J2EE, SOAP, Oracle, IBM Filenet,
+                REST-assured, Spring Batch, Jenkins, ArgoCD, Docker
+              </p>
+            </section>
+
+            <section class="article__project article__project--red">
               <time class="project__time" datetime="2023-07/2025-12">
                 July 2023 - December 2025
                 <span class="time__duration" id="ba2"></span>
@@ -318,8 +352,8 @@
               <ul class="project__description">
                 <li>Migrating and refactoring features from the deprecated
                   application to the new version of the application.</li>
-                <li>Refining new features with Requirements Engineers and
-                  stakeholders.</li>
+                <li>Refining features and stories with Requirements Engineers
+                  and stakeholders.</li>
                 <li>Implementing features together with unit and integration
                   tests.</li>
                 <li>Setting up CI & CD pipelines on GitLab CI.</li>
@@ -328,6 +362,7 @@
                 <li>Analyzing and optimizing complex SQL queries for performance
                   enhancement</li>
                 <li>Taking over Product Owner duties in my deputy role.</li>
+                <li>Perform code reviews and train Junior developers</li>
               </ul>
               <p>
                 <strong class="description__technologies">Technologies:</strong>
@@ -358,7 +393,7 @@
                   consumed Kafka Topics and domain model.</li>
                 <li>Setting up database triggers to handle data coming into our
                   database asynchronously from Kafka.</li>
-                <li>Creating friendly user interfaces according to Figma
+                <li>Creating user-friendly interfaces according to Figma
                   designs.</li>
                 <li>Building complex dynamic forms with Angular and Formly.</li>
                 <li>Making authenticated calls using M2M tokens to other
@@ -658,6 +693,8 @@
     // experiences
     const adessoEl = document.getElementById('adesso');
     adessoEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2022, 0, 1), new Date())})`;
+    const egovEl = document.getElementById('egov');
+    egovEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2026, 0, 1), new Date())})`;
     const ba2El = document.getElementById('ba2');
     ba2El.innerHTML = `(${getYearsAndMonthsDuration(new Date(2023, 6, 1), new Date(2026, 0, 1))})`;
     const biqb2bEl = document.getElementById('biqb2b');
