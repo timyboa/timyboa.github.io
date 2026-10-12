@@ -40,18 +40,20 @@
       <div>
         <h2 class="caption__subtitle">
           Technical Product Management
-          <span class="subtitle__note">
+        </h2>
+        <p>
+          <span class="caption__note">
             w/
           </span>
-          <span class="subtitle__note" id="subtitle__experience">
+          <span class="caption__note" id="caption__experience">
             years of Software Engineering
           </span>
           <script>
             const experience = getYearsToDate(new Date(2018, 1, 1));
-            const experienceParagraph = document.getElementById('subtitle__experience');
+            const experienceParagraph = document.getElementById('caption__experience');
             experienceParagraph.innerHTML = experience + experienceParagraph.innerHTML;
           </script>
-        </h2>
+        </p>
       </div>
       <div class="flex-row">
         <div class="flex-item" id="caption__age">
