@@ -338,9 +338,8 @@ ul.project__description {
     widows: 3;
   }
 
-  /* Page 2: force sidebar and main content to start on new page */
-  .main__section.languages,
-  .main__section.freelance {
+  /* Page 2: force sidebar to start on new page */
+  .main__section.languages {
     break-before: page;
   }
 }
